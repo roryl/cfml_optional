@@ -46,6 +46,33 @@ public Optional getMyEntity(){
 ####Deferred Handling
 Sometimes a variable may be present or null, and you need to pass that onto some other function. However, maybe you'd rather handle the existence of the value later, rather than when it is passed. Wrapping possible null values allows you to pass the Optional around without getting null pointer or missing variables errors.
 
+####Comparing possible Null values
+In situations when you may want to compare two variables which one of them may be null, it requires a lot of conditional statements. Using Optional, equality can be checked more quickly. Consider the following:
+
+```coldfusion
+var test1 = variables.test1 //may be null
+var test2 = variables.test2 //may be null
+if(!isNull(test1) AND !isNull(test2){
+  if(test1 == test2){
+    //equal!
+  } else {
+    //not equal!
+  }
+} else if(isNull(test1) AND isNull(test2){
+  //equal, they are both null!
+} else if((!isNull(test1) AND isNull(test2)) OR (isNull(test1) AND !isNull(test2)){
+    //not equal, one of them is null!
+  }
+}
+
+This equality can be much more easily tested
+
+```coldfusion
+var test1 = new Optional(variables,"test1");
+var test2 = new Optional(variables,"test2");
+var result = test1.equals(test2);
+```
+
 ###Instantiation Options
 
 ####A Value or Possible Null Value
