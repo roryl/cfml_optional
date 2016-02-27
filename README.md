@@ -98,6 +98,19 @@ var Optional = new Optional(
 var Optional = new Optional(application,"key");
 ```
 
+##Installation
 
+###Traditional
+Download the Optional.cfc file and place it anywhere to use it, usually in a Util directory
+
+###CommandBox
+cfml_option is a CommandBox package, install it using commandBox
+
+###For Production Use
+`install https://github.com/roryl/cfml_optional/archive/master.zip --production`
+
+###For Contributing to cfml_optional
+This will install the testbox dependencies and unit tests
+`install https://github.com/roryl/cfml_optional/archive/master.zip`
 
 
