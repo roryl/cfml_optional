@@ -113,4 +113,13 @@ cfml_option is a CommandBox package, install it using commandBox
 This will install the testbox dependencies and unit tests
 `install https://github.com/roryl/cfml_optional/archive/master.zip`
 
+##Optional.cfc API
 
+###public boolean function Exists()
+###public any function if(required any func)
+###public any function get()
+###public any function ifElse(required any ifFunc, required any elseFunc)
+###public any function elseThrow(message)
+###public any function or(required any other)
+###public any function else(required any other)
+###public boolean function equals(required any value)
