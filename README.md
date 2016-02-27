@@ -28,7 +28,7 @@ var myObj = new Optional(entityLoad("myEntity",1,true)).else(entityNew("myEntity
 Which does the same thing 'Instantiate Optional and call else() on it. Else returns the value of the Optional, or executes else function, returning a new entity
 
 ####Type Hinting
-Use Optional as a return type to your functions to inform callers that your function may return a value or return null. Normally a function would be this
+Use Optional as a return type to your functions to inform callers that your function may return a value or return null. Normally a function that may returns nulls may look like:
 
 ```coldfusion
 public any function getMyEntity(){
@@ -42,4 +42,7 @@ public Optional getMyEntity(){
   return new Optional(entityLoadByPK("myEntity",1));
 }
 ```
+
+####Deferred Handling
+Sometimes a variable may be present or null, and you need to pass that onto some other function. However, maybe you'd rather handle the existence of the value later, rather than when it is passed. Wrapping possible null values allows you to pass the Optional around without getting null pointer or missing variables errors.
 
