@@ -1,5 +1,5 @@
 # cfml_optional
-##Class to handle Nulls in CFML
+##CFC to handle Nulls in CFML
 
 Handling NULL references can be tedious in some situations in CFML, particularly when using the ORM, which may often return NULL references, or using Java libraries which may return NULL. 
 
@@ -97,6 +97,9 @@ var Optional = new Optional(
 ```coldfusion
 var Optional = new Optional(application,"key");
 ```
+
+##Requirements
+Only tested against Lucee 4.5+. Requires Closures which are on CF 10+ and Railo 4.2+
 
 ##Installation
 
