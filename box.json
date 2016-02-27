@@ -1,0 +1,87 @@
+{
+    "name":"Optional",
+    "version":"0.0.0",
+    "author":"",
+    "location":"",
+    "directory":"",
+    "createPackageDirectory":true,
+    "packageDirectory":"",
+    "homepage":"",
+    "documentation":"",
+    "repository":{
+        "type":"",
+        "URL":""
+    },
+    "bugs":"",
+    "slug":"optional",
+    "shortDescription":"An NULL handling class for CFML",
+    "description":"",
+    "instructions":"",
+    "changelog":"",
+    "type":"",
+    "keywords":[
+
+    ],
+    "private":false,
+    "engines":[
+        {
+            "type":"",
+            "version":""
+        }
+    ],
+    "defaultEngine":"",
+    "defaultPort":0,
+    "projectURL":"",
+    "license":[
+        {
+            "type":"",
+            "URL":""
+        }
+    ],
+    "contributors":[
+
+    ],
+    "dependencies":{
+
+    },
+    "devDependencies":{
+        "testbox":"2.2.0"
+    },
+    "installPaths":{
+        "testbox":"testbox"
+    },
+    "ignore":[
+        "**/.*",
+        "test",
+        "tests"
+    ],
+    "testbox":{
+        "runner":[
+            {
+                "default":"http://127.0.0.1:56011/OptionalTest.cfc?method=runremote"
+            }
+        ],
+        "labels":[
+
+        ],
+        "reporter":"",
+        "reporterResults":"",
+        "bundles":[
+            ""
+        ],
+        "directory":{
+            "mapping":"",
+            "recurse":true
+        },
+        "watchers":[
+
+        ],
+        "notify":{
+            "emails":[
+
+            ],
+            "growl":"",
+            "URL":""
+        }
+    }
+}
