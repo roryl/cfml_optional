@@ -7,8 +7,11 @@ cfml_optional is a signle Optional.cfc file which makes instatiating objects & v
 
 Inspired by some use cases of Java Optional, but different Syntax that better fit my purposes. To understand a Java perspective on why you might use Optional you may read: http://www.oracle.com/technetwork/articles/java/java8-optional-2175753.html
 
-[Intended Uses](#intended-uses)
-[Installation](#installation)
++[Intended Uses](#intended-uses)
++[Instantiation](#instantiation)
++[Installation](#installation)
++[Optional.cfc API Reference](#optional.cfc-api-reference)
+
 
 ###Intended Uses
 ####Syntactic Sugar
@@ -122,7 +125,7 @@ cfml_option is a CommandBox package, install it using commandBox
 This will install the testbox dependencies and unit tests
 `install https://github.com/roryl/cfml_optional/archive/master.zip`
 
-##Optional.cfc API
+##Optional.cfc API Reference
 
 ###public boolean function Exists()
 ###public any function if(required any if)
