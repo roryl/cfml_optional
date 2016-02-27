@@ -11,7 +11,7 @@ Inspired by some use cases of Java Optional, but different Syntax that better fi
 - [Intended Uses](#intended-uses)
 - [Instantiation](#instantiation)
 - [Installation](#installation)
-- [Optional.cfc API Reference](#optional.cfc-api-reference)
+- [API Reference](#optional.cfc-api-reference)
 
 
 ###Intended Uses
@@ -126,7 +126,7 @@ cfml_option is a CommandBox package, install it using commandBox
 This will install the testbox dependencies and unit tests
 `install https://github.com/roryl/cfml_optional/archive/master.zip`
 
-##Optional.cfc API Reference
+##API Reference
 
 ###public boolean function Exists()
 ###public any function if(required any if)
