@@ -13,7 +13,7 @@
         "URL":""
     },
     "bugs":"",
-    "slug":"optional",
+    "slug":"",
     "shortDescription":"An NULL handling class for CFML",
     "description":"",
     "instructions":"",
