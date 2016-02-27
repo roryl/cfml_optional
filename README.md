@@ -37,7 +37,7 @@ public any function getMyEntity(){
   return entityLoadByPK("myEntity",1);
 }
 ```
-The type signature of this function is 'any' but that is inacurate. It can either be a component, or null. Using Optional adds type information for IDE or user introspection 
+The type signature of this function is 'any' but that is not precise enoug for some situations. It can either be a component, or null. Using Optional adds type information for IDE or user introspection and ensures that the caller must handle the Optional
 
 ```coldfusion
 public Optional getMyEntity(){
@@ -95,7 +95,7 @@ var Optional = new Optional(
 );
 ```
 
-####A scope and a key which may hve a value or be null
+####A scope and a key which may have a value or be null
 ```coldfusion
 var Optional = new Optional(application,"key");
 ```
