@@ -9,11 +9,8 @@ Inspired by some use cases of Java Optional, but different Syntax that better fi
 
 ###Table of Contents
 [Intended Uses](#intended-uses)
-
 [Instantiation](#instantiation)
-
 [Installation](#installation)
-
 [Optional.cfc API Reference](#optional.cfc-api-reference)
 
 
