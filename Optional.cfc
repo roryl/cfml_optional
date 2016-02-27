@@ -53,9 +53,9 @@ component {
     * }
     * The values passed to if can be a value, or a closure which returns a value
     */
-    public any function if(required any func){
+    public any function if(required any if){
         if(Exists()){
-            return getOrCallValue(arguments.func);
+            return getOrCallValue(arguments.if);
         }
     }
 
@@ -83,11 +83,11 @@ component {
     * }
     * The values passed to ifElse can be a value, or a closure which returns a value
     */
-    public any function ifElse(required any ifFunc, required any elseFunc){
+    public any function ifElse(required any if, required any else){
         if(Exists()){
-            return getOrCallValue(arguments.ifFunc);
+            return getOrCallValue(arguments.if);
         } else {
-            return getOrCallValue(arguments.elseFunc);
+            return getOrCallValue(arguments.else);
         }
     }
 

@@ -1,7 +1,7 @@
 # cfml_optional
 ##A CFC to handle Nulls in CFML
 
-Handling NULL references can be tedious in some situations in CFML, particularly when using the ORM, which may often return NULL references, or using Java libraries which may return NULL. 
+Handling NULL references can be tedious in some situations in CFML, particularly when using the ORM, which may often return NULL references, or using Java libraries which may return NULL.
 
 cfml_optional is a signle Optional.cfc file which makes instatiating objects & values which may be null, and handling that null possibility gracefully.
 
@@ -122,10 +122,10 @@ This will install the testbox dependencies and unit tests
 ##Optional.cfc API
 
 ###public boolean function Exists()
-###public any function if(required any func)
+###public any function if(required any if)
 ###public any function get()
-###public any function ifElse(required any ifFunc, required any elseFunc)
+###public any function ifElse(required any if, required any else)
 ###public any function elseThrow(message)
 ###public any function or(required any other)
 ###public any function else(required any other)
-###public boolean function equals(required Optional Optional)
+###public boolean function equals(required Optional value)
