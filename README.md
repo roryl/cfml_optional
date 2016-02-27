@@ -1,5 +1,5 @@
 # cfml_optional
-##CFC to handle Nulls in CFML
+##A CFC to handle Nulls in CFML
 
 Handling NULL references can be tedious in some situations in CFML, particularly when using the ORM, which may often return NULL references, or using Java libraries which may return NULL. 
 
