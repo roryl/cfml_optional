@@ -46,3 +46,30 @@ public Optional getMyEntity(){
 ####Deferred Handling
 Sometimes a variable may be present or null, and you need to pass that onto some other function. However, maybe you'd rather handle the existence of the value later, rather than when it is passed. Wrapping possible null values allows you to pass the Optional around without getting null pointer or missing variables errors.
 
+###Instantiation Options
+
+####A Value or Possible Null Value
+
+```coldfusion
+var Optional = new Optional(entityLoadByPK("MyEntity,1));
+```
+
+####A Closure which Wraps a possible Null value
+Use this when you don't know if the variable you want to instantiate will exist or not at time of instantiation of the Optional
+
+```coldfusion
+var Optional = new Optional(
+  function(){
+    return variableWhichMayNotExist;
+  }
+);
+```
+
+####A scope and a key which may hve a value or be null
+```coldfusion
+var Optional = new Optional(application,"key");
+```
+
+
+
+
