@@ -128,4 +128,4 @@ This will install the testbox dependencies and unit tests
 ###public any function elseThrow(message)
 ###public any function or(required any other)
 ###public any function else(required any other)
-###public boolean function equals(required any value)
+###public boolean function equals(required Optional Optional)
