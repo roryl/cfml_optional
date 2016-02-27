@@ -7,6 +7,9 @@ cfml_optional is a signle Optional.cfc file which makes instatiating objects & v
 
 Inspired by some use cases of Java Optional, but different Syntax that better fit my purposes. To understand a Java perspective on why you might use Optional you may read: http://www.oracle.com/technetwork/articles/java/java8-optional-2175753.html
 
+[Intended Uses](#intended-uses)
+[Installation](#installation)
+
 ###Intended Uses
 ####Syntactic Sugar
 When initializing objects which may be null, there is a common syntax:
