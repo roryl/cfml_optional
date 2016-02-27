@@ -134,7 +134,7 @@ component {
     * One Null, and one Has Value - false
     * Both have different Values - false
     */
-    public boolean function equals(required Optional Optional){
+    public boolean function equals(required Optional value){
 
         var testValue = arguments.value;
         if(!isInstanceOf(testValue, "Optional")){
