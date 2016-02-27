@@ -107,6 +107,21 @@ var Optional = new Optional(
 var Optional = new Optional(application,"key");
 ```
 
+##Subtyped Optional
+By default, the Optional.cfc will return a value of any type, if it exists. If you want to ensure that the returned value matched a specific type (thus your function returns a NULL or an item of a specific type) then you can subtype the Optional.
+
+Here we create a new CFC which Extends Optional. Override the get function, with the appropriate return type: 
+```javascript
+//ArrayOptional.cfc
+component extends="Optional" {
+
+    public array function get(){
+        return super.get();
+    }
+
+}
+```
+
 ##Requirements
 Only tested against Lucee 4.5+. Requires Closures which are on CF 10+ and Railo 4.2+
 
