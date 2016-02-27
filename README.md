@@ -49,7 +49,7 @@ Sometimes a variable may be present or null, and you need to pass that onto some
 ####Comparing possible Null values
 In situations when you may want to compare two variables which one of them may be null, it requires a lot of conditional statements. Using Optional, equality can be checked more quickly. Consider the following:
 
-```coldfusion
+```javascript
 var test1 = variables.test1 //may be null
 var test2 = variables.test2 //may be null
 if(!isNull(test1) AND !isNull(test2){
@@ -64,6 +64,7 @@ if(!isNull(test1) AND !isNull(test2){
     //not equal, one of them is null!
   }
 }
+```
 
 This equality can be much more easily tested
 
