@@ -96,7 +96,7 @@ component {
     */
     public any function elseThrow(message){
         if(Exists()){
-            return variables.value;
+            return get();
         } else {
             throw arguments.message;
         }
@@ -121,7 +121,7 @@ component {
     */
     public any function else(required any other){
         if(Exists()){
-            return variables.value;
+            return get();
         } else {
             return getOrCallValue(arguments.other);
         }
