@@ -110,7 +110,7 @@ var Optional = new Optional(application,"key");
 ##Subtyped Optional
 By default, the Optional.cfc will return a value of any type, if it exists. If you want to ensure that the returned value matched a specific type (thus your function returns a NULL or an item of a specific type) then you can subtype the Optional.
 
-Here we create a new CFC which Extends Optional. Override the get function, with the appropriate return type, in this case an array: 
+Create your own CFC that will represent your desired type and extend Optional. Override the get function, with the appropriate return type, in this case an array: 
 ```javascript
 //ArrayOptional.cfc
 component extends="Optional" {
