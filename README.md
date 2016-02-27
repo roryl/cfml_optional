@@ -11,7 +11,7 @@ Inspired by some use cases of Java Optional, but different Syntax that better fi
 - [Intended Uses](#intended-uses)
 - [Instantiation](#instantiation)
 - [Installation](#installation)
-- [API Reference](#optional.cfc-api-reference)
+- [API Reference](#api-reference)
 
 
 ###Intended Uses
