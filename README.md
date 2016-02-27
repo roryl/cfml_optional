@@ -110,6 +110,7 @@ Download the Optional.cfc file and place it anywhere to use it, usually in a Uti
 
 ###CommandBox
 cfml_option is a CommandBox package, install it using commandBox
+[Obtain CommandBox package manager](http://www.ortussolutions.com/products/commandbox)
 
 ###For Production Use
 `install https://github.com/roryl/cfml_optional/archive/master.zip --production`
