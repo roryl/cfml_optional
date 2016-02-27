@@ -21,6 +21,7 @@ component {
         if(isClosure(arguments.value)){
             try {
                 variables.value = arguments.value();
+                return this;
             } catch (any e){
                 //No nothing.
                 return this;

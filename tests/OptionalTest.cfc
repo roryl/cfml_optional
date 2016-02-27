@@ -74,6 +74,7 @@ component extends="testbox.system.BaseSpec"{
 			});
 			expect(Optional).toBeInstanceOf("Optional");
 			expect(Optional.exists()).toBeTrue();
+			expect(Optional.get()).toBeTrue();
 			return false;
 		}
 
