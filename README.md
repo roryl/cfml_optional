@@ -28,8 +28,13 @@ if(isNull(myObj)){
 
 This can be very verbose, particularly if you need to instantiate a tree of objects
 
-Optional.cfc makes this easier like the following
+Lucee and CF11+ support Null-coalescing operator which is useful for short inline creation
+```javascript
+myObj = entityLoad("myEntity",1,true); ?: entityNew("myEntity");
+```
+For these simple cases like this, they are better than using Optional which is a little more verbose
 
+Optional.cfc it is also possible to do this
 ```javascript
 var myObj = new Optional(entityLoad("myEntity",1,true)).else(entityNew("myEntity"));
 ```
@@ -37,7 +42,7 @@ var myObj = new Optional(entityLoad("myEntity",1,true)).else(entityNew("myEntity
 Which does the same thing 'Instantiate Optional and call else() on it. Else returns the value of the Optional, or executes else function, returning a new entity
 
 ####Type Hinting
-Use Optional as a return type to your functions to inform callers that your function may return a value or return null. Normally a function that may returns nulls may look like:
+The more common Use for Optional is as a return type to your functions to inform callers that your function may return a value or return null. Normally a function that may returns nulls may look like:
 
 ```javascript
 public any function getMyEntity(){
