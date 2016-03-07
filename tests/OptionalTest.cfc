@@ -42,10 +42,11 @@ component extends="testbox.system.BaseSpec"{
 		}
 
 		function testShouldInitWithValueAndKey() labels="init"{
-			local.key = "true";
-			var Optional = new Optional(local,"key");
+			key = "true";
+			var Optional = new Optional(variables,"key");
 			expect(Optional).toBeInstanceOf("Optional");
 			expect(Optional.exists()).toBeTrue();
+			expect(Optional.get()).toBe(true);
 			return false;
 		}
 

@@ -11,7 +11,7 @@ component {
     public function init(value,key){
         if(structKeyExists(arguments,"key") AND !isNull(arguments.key)){
             if(structKeyExists(arguments.value, arguments.key) AND !isNull(arguments.value[key])){
-                variables.value = arguments.value;
+                variables.value = arguments.value[arguments.key];
                 return this;
             } else {
                 return this;
