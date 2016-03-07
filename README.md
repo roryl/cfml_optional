@@ -93,7 +93,7 @@ var result = test1.equals(test2);
 ####A Value or Possible Null Value
 
 ```javascript
-var Optional = new Optional(entityLoadByPK("MyEntity,1));
+var Optional = new Optional(entityLoadByPK("MyEntity",1));
 ```
 
 ####A Closure which Wraps a possible Null value
