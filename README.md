@@ -3,7 +3,7 @@
 
 Handling NULL references can be tedious in some situations in CFML, particularly when using the ORM, which may often return NULL references, or using Java libraries which may return NULL.
 
-cfml_optional is a signle Optional.cfc file which makes instatiating objects & values which may be null, and handling that null possibility gracefully.
+cfml_optional is a single Optional.cfc file which makes instatiating objects & values which may be null easier, and handling that null possibility gracefully.
 
 Inspired by some use cases of Java Optional, but different Syntax that better fit my purposes. To understand a Java perspective on why you might use Optional you may read: http://www.oracle.com/technetwork/articles/java/java8-optional-2175753.html
 
@@ -18,7 +18,7 @@ Inspired by some use cases of Java Optional, but different Syntax that better fi
 ####Syntactic Sugar
 When initializing objects which may be null, there is a common syntax:
 
-```cfml
+```javascript
 //Loading an entity
 var myObj = entityLoad("myEntity",1,true);
 if(isNull(myObj)){
@@ -30,7 +30,7 @@ This can be very verbose, particularly if you need to instantiate a tree of obje
 
 Optional.cfc makes this easier like the following
 
-```coldfusion
+```javascript
 var myObj = new Optional(entityLoad("myEntity",1,true)).else(entityNew("myEntity"));
 ```
 
@@ -39,21 +39,21 @@ Which does the same thing 'Instantiate Optional and call else() on it. Else retu
 ####Type Hinting
 Use Optional as a return type to your functions to inform callers that your function may return a value or return null. Normally a function that may returns nulls may look like:
 
-```coldfusion
+```javascript
 public any function getMyEntity(){
   return entityLoadByPK("myEntity",1);
 }
 ```
-The type signature of this function is 'any' but that is not precise enoug for some situations. It can either be a component, or null. Using Optional adds type information for IDE or user introspection and ensures that the caller must handle the Optional
+The type signature of this function is 'any' but that is not precise enough for some situations. It can either be a the entity, or null. Using Optional adds type information for IDE or user introspection and ensures that the caller must handle the Optional
 
-```coldfusion
+```javascript
 public Optional getMyEntity(){
   return new Optional(entityLoadByPK("myEntity",1));
 }
 ```
 
 ####Deferred Handling
-Sometimes a variable may be present or null, and you need to pass that onto some other function. However, maybe you'd rather handle the existence of the value later, rather than when it is passed. Wrapping possible null values allows you to pass the Optional around without getting null pointer or missing variables errors.
+Sometimes a variable may be present or null, and you need to pass that onto some other function. However, maybe you'd rather handle the existence of the value later, rather than when it is passed. Wrapping possible null values allows you to pass the Optional around without getting null pointer or missing variable errors.
 
 ####Comparing possible Null values
 In situations when you may want to compare two variables which one of them may be null, it requires a lot of conditional statements. Using Optional, equality can be checked more quickly. Consider the following:
@@ -77,7 +77,7 @@ if(!isNull(test1) AND !isNull(test2){
 
 This equality can be much more easily tested
 
-```coldfusion
+```javascript
 var test1 = new Optional(variables,"test1");
 var test2 = new Optional(variables,"test2");
 var result = test1.equals(test2);
@@ -87,14 +87,14 @@ var result = test1.equals(test2);
 
 ####A Value or Possible Null Value
 
-```coldfusion
+```javascript
 var Optional = new Optional(entityLoadByPK("MyEntity,1));
 ```
 
 ####A Closure which Wraps a possible Null value
 Use this when you don't know if the variable you want to instantiate will exist or not at time of instantiation of the Optional
 
-```coldfusion
+```javascript
 var Optional = new Optional(
   function(){
     return variableWhichMayNotExist;
@@ -103,7 +103,7 @@ var Optional = new Optional(
 ```
 
 ####A scope and a key which may have a value or be null
-```coldfusion
+```javascript
 var Optional = new Optional(application,"key");
 ```
 
